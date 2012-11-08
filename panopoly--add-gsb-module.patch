@@ -1,0 +1,11 @@
+diff --git a/panopoly.info b/panopoly.info
+index 3aea3d4..64618eb 100644
+--- a/panopoly.info
++++ b/panopoly.info
+@@ -37,3 +37,6 @@ dependencies[] = panopoly_wysiwyg
+ dependencies[] = navbar
+ dependencies[] = devel
+ dependencies[] = uuid
++
++; GSB Patches
++dependencies[] = gsb_panopoly
