@@ -1,11 +1,14 @@
 diff --git a/panopoly.info b/panopoly.info
-index 3aea3d4..64618eb 100644
+index 3aea3d4..df556df 100644
 --- a/panopoly.info
 +++ b/panopoly.info
-@@ -37,3 +37,6 @@ dependencies[] = panopoly_wysiwyg
- dependencies[] = navbar
- dependencies[] = devel
- dependencies[] = uuid
-+
-+; GSB Patches
+@@ -3,6 +3,9 @@ distribution_name = Panopoly
+ description = A magical framework for building Drupal products based on the Panels module
+ core = 7.x
+
++; GSB Panopoly
 +dependencies[] = gsb_panopoly
++
+ ; Drupal Core
+ dependencies[] = menu
+ dependencies[] = image
