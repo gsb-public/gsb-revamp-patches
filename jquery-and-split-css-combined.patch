@@ -1,0 +1,19 @@
+diff --git a/open_framework.info b/open_framework.info
+index 13d6a90..ca1c447 100644
+--- a/open_framework.info
++++ b/open_framework.info
+@@ -3,7 +3,6 @@ description = Base theme made with Twitter Bootstrap
+ core = 7.x
+ version = 2.02
+ 
+-scripts[] = js/jquery-1.8.2.min.js
+ scripts[] = bootstrap/js/bootstrap.min.js
+ scripts[] = js/open_framework.js
+ scripts[] = js/override.js
+@@ -42,4 +41,4 @@ regions[main_bottom] = Main: Bottom
+ settings['bootstrap_css'] = 1
+ settings['bootstrap_responsive_css'] = 1
+ settings['bootstrap_navigation_css'] = 1
+-settings['openframework_css'] = 1
+\ No newline at end of file
++settings['openframework_css'] = 1
