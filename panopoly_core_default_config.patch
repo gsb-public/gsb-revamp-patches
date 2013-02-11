@@ -1,0 +1,12 @@
+diff --git a/panopoly_core.make b/panopoly_core.make
+index 2c1b0b7..dc87c85 100644
+--- a/panopoly_core.make
++++ b/panopoly_core.make
+@@ -102,6 +102,7 @@ projects[strongarm][subdir] = contrib
+ 
+ projects[defaultconfig][version] = 1.0-alpha9
+ projects[defaultconfig][subdir] = contrib
++projects[defaultconfig][patch][1912312] = http://drupal.org/files/defaultconfig-remove-notice-1912312.patch
+ 
+ projects[defaultcontent][version] = 1.x-dev
+ projects[defaultcontent][subdir] = contrib
