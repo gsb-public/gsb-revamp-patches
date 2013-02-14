@@ -1,5 +1,5 @@
 diff --git a/views_load_more.module b/views_load_more.module
-index 4205e55..1c089a5 100644
+index 4205e55..7ae98f7 100644
 --- a/views_load_more.module
 +++ b/views_load_more.module
 @@ -65,6 +65,7 @@ function views_load_more_views_ajax_data_alter(&$commands, $view) {
@@ -19,18 +19,20 @@ index 4205e55..1c089a5 100644
        array(
          'items' => $items,
          'title' => NULL,
-@@ -97,5 +98,9 @@ function theme_views_load_more_pager($vars) {
+@@ -97,5 +98,11 @@ function theme_views_load_more_pager($vars) {
          'attributes' => array('class' => array('pager', 'pager-load-more')),
        )
      );
 +    if ($vars['use_go_to_top_link']) {
-+      $output .= '<a href="#" class="go-to-top-link">Back to the Top</a>';
++      $output .= '<a href="#" class="go-to-top-link">'
++      . $vars['use_go_to_top_text']
++      . '</a>';
 +    }
 +    return $output;
    }
  }
 diff --git a/views_plugin_pager_load_more.inc b/views_plugin_pager_load_more.inc
-index 936bba4..f7748f8 100644
+index 936bba4..347c256 100644
 --- a/views_plugin_pager_load_more.inc
 +++ b/views_plugin_pager_load_more.inc
 @@ -51,7 +51,7 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
@@ -38,29 +40,46 @@ index 936bba4..f7748f8 100644
      // Keep items per page as the first form element on the page followed by
      // the option to change the 'load more' button text
 -    $form['items_per_page']['#weight'] = -2;
-+    $form['items_per_page']['#weight'] = -3;
++    $form['items_per_page']['#weight'] = -4;
  
      // Option for users to specify the text used on the 'load more' button.
      $form['more_button_text'] = array(
-@@ -59,6 +59,13 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
+@@ -59,7 +59,29 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
        '#title' => t('More link text'),
        '#description' => t('The text that will be displayed on the link that is used to load more elements. For example "Show me more"'),
        '#default_value' => $this->options['more_button_text'] ? $this->options['more_button_text'] : t('Load more'),
-+      '#weight' => -2,
++      '#weight' => -3,
 +    );
 +
 +    $form['use_go_to_top_link'] = array(
 +      '#type' => 'checkbox',
-+      '#title' => t('Include go to top link'),
++      '#title' => t('Add a "go to top" button after pager'),
 +      '#default_value' => $this->options['use_go_to_top_link'] ? $this->options['use_go_to_top_link'] : 0,
++      '#weight' => -2,
++    );
++
++    $form['use_go_to_top_text'] = array(
++      '#type' => 'textfield',
++      '#title' => t('Go to top button text'),
++      '#description' => t('The text that will be displayed on the "go to top" button'),
++      '#default_value' => $this->options['use_go_to_top_text'] ? $this->options['use_go_to_top_text'] : t('Go to top'),
        '#weight' => -1,
++      '#states' => array(
++        'visible' => array(
++          ':input[name="pager_options[use_go_to_top_link]"]' => array(
++            'checked' => TRUE,
++          ),
++        ),
++      ),
      );
  
-@@ -149,6 +156,7 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
+     if (module_exists('waypoints')) {
+@@ -149,6 +171,8 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
        'parameters' => $input,
        'element' => $this->options['id'],
        'more_button_text' => $this->options['more_button_text'],
 +      'use_go_to_top_link' => $this->options['use_go_to_top_link'],
++      'use_go_to_top_text' => $this->options['use_go_to_top_text'],
      );
  
      return theme($pager_theme, $vars);
