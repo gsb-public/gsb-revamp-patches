@@ -1,0 +1,66 @@
+diff --git a/views_load_more.module b/views_load_more.module
+index 4205e55..1c089a5 100644
+--- a/views_load_more.module
++++ b/views_load_more.module
+@@ -65,6 +65,7 @@ function views_load_more_views_ajax_data_alter(&$commands, $view) {
+ 
+ function theme_views_load_more_pager($vars) {
+   global $pager_page_array, $pager_total;
++  $output = '';
+ 
+   drupal_add_js(drupal_get_path('module', 'views_load_more').'/views_load_more.js');
+ 
+@@ -89,7 +90,7 @@ function theme_views_load_more_pager($vars) {
+       'class' => array('pager-next'),
+       'data' => $li_next,
+     );
+-    return theme('item_list',
++    $output = theme('item_list',
+       array(
+         'items' => $items,
+         'title' => NULL,
+@@ -97,5 +98,9 @@ function theme_views_load_more_pager($vars) {
+         'attributes' => array('class' => array('pager', 'pager-load-more')),
+       )
+     );
++    if ($vars['use_go_to_top_link']) {
++      $output .= '<a href="#" class="go-to-top-link">Back to the Top</a>';
++    }
++    return $output;
+   }
+ }
+diff --git a/views_plugin_pager_load_more.inc b/views_plugin_pager_load_more.inc
+index 936bba4..f7748f8 100644
+--- a/views_plugin_pager_load_more.inc
++++ b/views_plugin_pager_load_more.inc
+@@ -51,7 +51,7 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
+ 
+     // Keep items per page as the first form element on the page followed by
+     // the option to change the 'load more' button text
+-    $form['items_per_page']['#weight'] = -2;
++    $form['items_per_page']['#weight'] = -3;
+ 
+     // Option for users to specify the text used on the 'load more' button.
+     $form['more_button_text'] = array(
+@@ -59,6 +59,13 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
+       '#title' => t('More link text'),
+       '#description' => t('The text that will be displayed on the link that is used to load more elements. For example "Show me more"'),
+       '#default_value' => $this->options['more_button_text'] ? $this->options['more_button_text'] : t('Load more'),
++      '#weight' => -2,
++    );
++
++    $form['use_go_to_top_link'] = array(
++      '#type' => 'checkbox',
++      '#title' => t('Include go to top link'),
++      '#default_value' => $this->options['use_go_to_top_link'] ? $this->options['use_go_to_top_link'] : 0,
+       '#weight' => -1,
+     );
+ 
+@@ -149,6 +156,7 @@ class views_plugin_pager_load_more extends views_plugin_pager_full {
+       'parameters' => $input,
+       'element' => $this->options['id'],
+       'more_button_text' => $this->options['more_button_text'],
++      'use_go_to_top_link' => $this->options['use_go_to_top_link'],
+     );
+ 
+     return theme($pager_theme, $vars);
