@@ -1,0 +1,13 @@
+diff --git a/plugins/FeedsFileProcessor.inc b/plugins/FeedsFileProcessor.inc
+index 99ab342..c124b1b 100644
+--- a/plugins/FeedsFileProcessor.inc
++++ b/plugins/FeedsFileProcessor.inc
+@@ -247,7 +247,7 @@ class FeedsFileProcessor extends FeedsProcessor {
+           }
+ 
+           if (!$fid) {
+-            $fid = db_query("SELECT fid FROM {file_managed} WHERE uri = :uri AND type = :type", array(':uri' => $value, ':type' => $this->config['file_type']))->fetchField();
++            $fid = db_query("SELECT fid FROM {file_managed} WHERE uri = :uri", array(':uri' => $value))->fetchField();
+           }
+           break;
+       }
