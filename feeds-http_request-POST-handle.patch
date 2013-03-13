@@ -1,11 +1,11 @@
 diff --git a/libraries/http_request.inc b/libraries/http_request.inc
-index 44f4fb5..8b8b10f 100644
+index 1ed19c2..25c87b4 100644
 --- a/libraries/http_request.inc
 +++ b/libraries/http_request.inc
-@@ -169,6 +169,10 @@ function http_request_get($url, $username = NULL, $password = NULL, $accept_inva
+@@ -178,6 +178,10 @@ function http_request_get($url, $username = NULL, $password = NULL, $accept_inva
        curl_setopt($download, CURLOPT_RETURNTRANSFER, TRUE);
        curl_setopt($download, CURLOPT_ENCODING, '');
-       curl_setopt($download, CURLOPT_TIMEOUT, variable_get('http_request_timeout', 30));
+       curl_setopt($download, CURLOPT_TIMEOUT, $request_timeout);
 +
 +      //have to put this line in case of POST api call
 +      curl_setopt($download, CURLOPT_POSTFIELDS, http_build_query(array()));
