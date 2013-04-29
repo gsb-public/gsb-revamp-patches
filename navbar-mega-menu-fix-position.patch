@@ -1,0 +1,18 @@
+diff --git a/js/navbar.js b/js/navbar.js
+index b2c8397..1085766 100644
+--- a/js/navbar.js
++++ b/js/navbar.js
+@@ -75,7 +75,12 @@ $.extend(Navbar.prototype, {
+     // Alter the padding on the top of the body element.
+     // @todo, this should be moved to drupal.js and register for
+     // the offsettopchange event.
+-    $('body').css('paddingTop', this.height);
++    //$('body').css('paddingTop', this.height);
++    $('body').css({
++    	
++    	'top': this.height,
++    	'position': 'relative'
++    });
+     $(document).trigger('offsettopchange');
+   }
+ });
