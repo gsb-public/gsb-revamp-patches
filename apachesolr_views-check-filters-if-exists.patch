@@ -1,0 +1,21 @@
+diff --git a/apachesolr_views_query.inc b/apachesolr_views_query.inc
+index 32a34f9..ad5988a 100644
+--- a/apachesolr_views_query.inc
++++ b/apachesolr_views_query.inc
+@@ -239,10 +239,12 @@ class apachesolr_views_query extends views_plugin_query {
+         $condition_strings[] = $this->build_where_string($condition);
+       }
+       $condition_strings = array_filter($condition_strings);
+-      $filterarray = $this->params['filters'];
+-      //bind filters with contextual filter
+-      if(is_array($filterarray) && count($filterarray) > 0) {
+-        $condition_strings = array_merge($condition_strings,$filterarray);
++      if (isset($this->params['filters'])) {
++        $filterarray = $this->params['filters'];
++        //bind filters with contextual filter
++        if(is_array($filterarray) && count($filterarray) > 0) {
++          $condition_strings = array_merge($condition_strings,$filterarray);
++        }
+       }
+ 
+       return implode(' ' . $where['type'] . ' ', $condition_strings);
