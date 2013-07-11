@@ -1,0 +1,30 @@
+diff --git a/includes/media.filter.inc b/includes/media.filter.inc
+index 291f25e..d51d4a6 100644
+--- a/includes/media.filter.inc
++++ b/includes/media.filter.inc
+@@ -432,11 +432,24 @@ function media_pre_render_text_format($element) {
+   $tagmap = _media_generate_tagMap($field['#value']);
+ 
+   if (isset($tagmap)) {
+-    drupal_add_js(array('tagmap' => $tagmap), 'setting');
++    _media_add_js(array('tagmap' => $tagmap), 'setting');
+   }
+   return $element;
+ }
+ 
++function _media_add_js($tagmap) {
++  $javascript = &drupal_add_js();
++  foreach($javascript['settings']['data'] as $key => $value) {
++    $found = array_key_exists('tagmap', $value);
++    if ($found) {
++      $tagmap = array_merge($value['tagmap'], $tagmap);
++      unset($javascript['settings']['data'][$key]);
++      break;
++    }
++  }
++  drupal_add_js(array('tagmap' => $tagmap), 'setting');
++}
++
+ /**
+  * Creates map of inline media tags.
+  *
