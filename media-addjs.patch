@@ -22,7 +22,7 @@ index 291f25e..d51d4a6 100644
 +      break;
 +    }
 +  }
-+  drupal_add_js(array('tagmap' => $tagmap), 'setting');
++  drupal_add_js(array($tagmap), 'setting');
 +}
 +
  /**
