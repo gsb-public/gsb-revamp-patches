@@ -1,0 +1,21 @@
+diff --git a/panopoly_admin.module b/panopoly_admin.module
+index 851df63..1eb6962 100644
+--- a/panopoly_admin.module
++++ b/panopoly_admin.module
+@@ -126,7 +126,7 @@ function panopoly_admin_form_alter(&$form, &$form_state, $form_id) {
+   if (isset($form['title']['#title'])) {
+     $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
+   }
+-
++/**
+   // Improve the URL selection form
+   if (isset($form['#entity_type']) && $form['#entity_type'] == 'node' && isset($form['path']) && isset($form['path']['alias'])) {
+     unset($form['path']['#type']); // remove the fieldset
+@@ -141,6 +141,7 @@ function panopoly_admin_form_alter(&$form, &$form_state, $form_id) {
+       $form['#submit'][] = 'panopoly_admin_pathauto_submit';
+     }
+   }
++**/
+   
+   // Add clearfix to node body container to prevent clearing issue with
+   // vertical tabs - @see https://drupal.org/node/1686500
