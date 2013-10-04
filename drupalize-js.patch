@@ -1,0 +1,75 @@
+diff --git a/responsive-tables.js b/responsive-tables.js
+index 1a862f1..f1925bf 100644
+--- a/responsive-tables.js
++++ b/responsive-tables.js
+@@ -1,4 +1,4 @@
+-$(document).ready(function() {
++(function ($) {
+   var switched = false;
+   var updateTables = function() {
+     if (($(window).width() < 767) && !switched ){
+@@ -15,32 +15,32 @@ else if (switched && ($(window).width() > 767)) {
+       });
+     }
+   };
+-   
++
+   $(window).load(updateTables);
+   $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
+   $(window).on("resize", updateTables);
+-   
+-	
+-	function splitTable(original)
+-	{
+-		original.wrap("<div class='table-wrapper' />");
+-		
+-		var copy = original.clone();
+-		copy.find("td:not(:first-child), th:not(:first-child)").css("display", "none");
+-		copy.removeClass("responsive");
+-		
+-		original.closest(".table-wrapper").append(copy);
+-		copy.wrap("<div class='pinned' />");
+-		original.wrap("<div class='scrollable' />");
++
++
++  function splitTable(original)
++  {
++    original.wrap("<div class='table-wrapper' />");
++
++    var copy = original.clone();
++    copy.find("td:not(:first-child), th:not(:first-child)").css("display", "none");
++    copy.removeClass("responsive");
++
++    original.closest(".table-wrapper").append(copy);
++    copy.wrap("<div class='pinned' />");
++    original.wrap("<div class='scrollable' />");
+ 
+     setCellHeights(original, copy);
+-	}
+-	
+-	function unsplitTable(original) {
++  }
++
++  function unsplitTable(original) {
+     original.closest(".table-wrapper").find(".pinned").remove();
+     original.unwrap();
+     original.unwrap();
+-	}
++  }
+ 
+   function setCellHeights(original, copy) {
+     var tr = original.find('tr'),
+@@ -56,7 +56,6 @@ function setCellHeights(original, copy) {
+         heights[index] = heights[index] || 0;
+         if (height > heights[index]) heights[index] = height;
+       });
+-
+     });
+ 
+     tr_copy.each(function (index) {
+@@ -64,4 +63,4 @@ function setCellHeights(original, copy) {
+     });
+   }
+ 
+-});
++}(jQuery));
