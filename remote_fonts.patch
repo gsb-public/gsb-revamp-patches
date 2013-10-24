@@ -1,0 +1,14 @@
+diff --git a/.htaccess b/.htaccess
+index 7ccb6a2..2143d00 100644
+--- a/.htaccess
++++ b/.htaccess
+@@ -141,3 +141,9 @@ DirectoryIndex index.php index.html index.htm
+     </FilesMatch>
+   </IfModule>
+ </IfModule>
++
++<FilesMatch "\.(ttf|otf|eot)$">
++  <IfModule mod_headers.c>
++    Header set Access-Control-Allow-Origin "*"
++  </IfModule>
++</FilesMatch>
