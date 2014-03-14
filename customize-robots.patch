@@ -1,0 +1,12 @@
+diff --git a/robots.txt b/robots.txt
+index 7de8435..3cd6136 100644
+--- a/robots.txt
++++ b/robots.txt
+@@ -19,6 +19,7 @@
+ User-agent: *
+ Crawl-delay: 10
+ # Directories
++Disallow: /files/
+ Disallow: /includes/
+ Disallow: /misc/
+ Disallow: /modules/
