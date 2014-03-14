@@ -1,0 +1,11 @@
+diff --git a/robots-disallow.txt b/robots-disallow.txt
+new file mode 100644
+index 0000000..966b443
+--- /dev/null
++++ b/robots-disallow.txt
+@@ -0,0 +1,5 @@
++# Used to disallow for certain domains.
++
++User-agent: *
++# Directories
++Disallow: /
