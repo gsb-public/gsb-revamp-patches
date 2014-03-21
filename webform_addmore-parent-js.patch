@@ -1,0 +1,13 @@
+diff --git a/js/webform_addmore.js b/js/webform_addmore.js
+index d2e3be1..cbe5ec7 100644
+--- a/js/webform_addmore.js
++++ b/js/webform_addmore.js
+@@ -68,7 +68,7 @@ function fieldsetRepeater(container, fieldsetSelecter, addBtnTxt, delBtnTxt, num
+ 
+           var hiddenFieldsets = $('#' + parent_id + ' ' + fieldsetSelecter).not(':visible');
+ 
+-          var cont = parent_fieldset.parent().parent();
++          var cont = parent_fieldset.parent();
+ 
+           $(cont).append(addBtn);
+           addBtn.show();
