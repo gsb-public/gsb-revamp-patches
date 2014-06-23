@@ -208,7 +208,7 @@ pDf@fM7q9#F25QXo3rUI;002ro52U44e~JJA002ovPDHLkV1l;_q@Mr)
 literal 0
 HcmV?d00001
 
-diff --git a/markitup/sets/markdown/images/ol.png b/markitup/sets/markdown/images/ol.png
+diff --git a/markitup/sets/markdown/images/list-numeric.png b/markitup/sets/markdown/images/list-numeric.png
 new file mode 100755
 index 0000000000000000000000000000000000000000..33b0b8df394dd66b20f74b551d5d52eb53cf335d
 GIT binary patch
@@ -305,7 +305,7 @@ RyaVV|22WQ%mvv4FO#ou1b4&mL
 literal 0
 HcmV?d00001
 
-diff --git a/markitup/sets/markdown/images/ul.png b/markitup/sets/markdown/images/ul.png
+diff --git a/markitup/sets/markdown/images/list-bullet.png b/markitup/sets/markdown/images/list-bullet.png
 new file mode 100755
 index 0000000000000000000000000000000000000000..4a8672bde48f806d3d4d37db192588a9aa3eac10
 GIT binary patch
