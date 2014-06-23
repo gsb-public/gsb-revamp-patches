@@ -1,0 +1,461 @@
+diff --git a/markitup/sets/markdown/images/bold.png b/markitup/sets/markdown/images/bold.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..889ae80e37b6167cc15f2a89e05a183815ec18b2
+GIT binary patch
+literal 304
+zcmV-00nh%4P)<h;3K|Lk000e1NJLTq000mG000mO1ONa4wfZ;e00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUy!bwCyR4C75
+z_|JeJGEhrFc|!U5lK%zov+GmWC%liGA1r`jLUDcO|E&EWR>b^}|6b=Y6y(;Y{!a!g
+z@UQp#@Aw}>L3(}s|7f5BUjeuKZvQRjV<<?dkNh8e->2U7yvu*H{aAbvQ6K!@3oKzW
+z-{Qa8d3gae1^)HE{~f^!v<1}u>;4xnKvUpW540I-w9J3a{{r=B3T*2g{_BH1CtaZO
+zpZ`6V0*V5g1e5i;`_=Z#_e=H*@8|93RG@lX;D!K7TKswwko8{x0000<MNUMnLSTXk
+CNr~0~
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/code.png b/markitup/sets/markdown/images/code.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..63fe6ceff5bfcedb9670279d4bb8d25807f6ecee
+GIT binary patch
+literal 859
+zcmV-h1El<kP)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBU!?MXyIR2Uge
+z!AoddRRDnD|DJp9JTs3>5>jf6w4x#gTU%_MMNlkNp$oSbvBp&uHw9M;u0-4@=t5BI
+zP6Hx#-C_{5R<NduC}m=argrQ!lX*Wg_dM=#0<-A%dCocZtXwD`13o;MPZWnbVyGi@
+z6tQcf4$uSYfCXAW1NZ{?Rx%M8bNtZ0sp1<?&T+SaigH60<ys@VpfvPC%guV9i+>MJ
+z0_P+Xkumexn8%)S+Y)#l(gR;YJP<6#1-=jjK0LONWPdJQIR8uK1HpvVIxBIQ2ztt+
+zqoEx_X9S%QG<IR9Z`t$a>Me=~(k#sebCL-an)%CR%a7YtUOQUgv+G>~?N~XSWhx=?
+z@$fx}0MB;$`JWcQ-Re{XV~5|{DvU(#*+NF*g)j^qk#b~G9_O!i*y&mZVZ=a3;Go(K
+z`DkskYn56Nhu+<KVd;VN?T7A3<(f^ynIl;YaOz;1?WQG@hR?6H`Qdt>k@1Ke*uY|x
+zI&k6j$JfNe_a{GH%=n2rZOz$Z8R9V?Pe36hIk}jo+A-`;dt9vyvBu#Xm@veu&@v`|
+zzt%mwc_$nd0-sMVx2d)b0!MqGxmfCumx7yB#nIUWvA{!HOMfslMyW1iV&nY>zxwyj
+z8^<?Fbz*Uk)$i-z;Oq4^*_5DDQ@m1~p}3SK89<{SVnS8D^!9U(G09lUuc>JfLN|kT
+z4m^Q1mhO(_r4w@`V?H=YNkOf(i&bHT3Auc3bryK1_{hDSetLoLN{VLB^78ULiNFy^
+zkUqqG$fjVkJj5tfWkOn|P5`HVEp5@-mGnc0wvJGHC=+39MC2TWT#i?t*~fNch*he_
+zgtS^8dH$(KlW)EF1b4Fzv~?&0IQaNdg;W5&{t&Bmg9&N1-rBBr_;Rg8ekw^mn;@T#
+zlS{|Rq+-Nlg18i%UY;i|q1NnSwf>I@85#4<mGzB<E9)Eg0W-i1FbzxtxkM}o5{ZCp
+lI!Qj8;*Y<|H-Mj*_#bi=aFBZ<R;>U4002ovPDHLkV1mEDi4_0<
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/h1.png b/markitup/sets/markdown/images/h1.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..9c122e91e358860733eaf08fd543e5fc585d4cfd
+GIT binary patch
+literal 276
+zcmeAS@N?(olHy`uVBq!ia0vp^0wB!60wlNoGJgf6SkfJR9T^zbpD<_bdI{u9mbgZg
+z1m~xflqVLYGB~E>C#5QQ<|d}62BjvZR2H60wE-$x=IP=XqH%ujg^j!|20W|*-XbO@
+zAtBSd^khRzd{=pNv@vN)9uZDqGTXuVPf6#I=?;x2B`Y;1YQMI>>GxvE??vtn{c>{A
+z7MYxUVrui2JTF|YR&ldntL8M3{q7no52$4`vIX;r@S8@YTFOM5*~nV4Gk-UYI5L$}
+zDw(h9UDksmVjphbEsSQ?UdGUxU4Htk{EZoY&3@-Y5*_;Wwk`ZAkg@!FaC~ii{N>;;
+VD%(>GD}XL$@O1TaS?83{1OVXtVO9VD
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/h2.png b/markitup/sets/markdown/images/h2.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..fbd87657fbe001c0a78fb095284fffc32e739497
+GIT binary patch
+literal 304
+zcmeAS@N?(olHy`uVBq!ia0vp^0wB!60wlNoGJgf6SkfJR9T^zbpD<_bdI{u9mbgZg
+z1m~xflqVLYGB~E>C#5QQ<|d}62BjvZR2H60wE-$R<muuVqH%ujg^j$;1_G=XCTnB}
+z2zDuH#kiEbi-|N@r=uvvrBdDGbAZKX0`H6m`4c#AC<xz?I>OXGNhtQ`{C(%$wdeB3
+zGTnLdz~IMJtNg?T>Z(s;oVU0)KW5x*9<WAh=atDnY<8?rlGxGj@c87V>xvq)rPF;`
+zY|Fc4&#rLa>Txf#@y+aKf+ac0%`STzAI(*qdYo^XFH557y+_x*JpKO5^1S9?c^6}{
+zP=+&OVHtDUrGN<!XCIo*k$*m#XV!Y_uRs4VByhd%D`U$30Q3!mr>mdKI;Vst0KHFj
+AM*si-
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/h3.png b/markitup/sets/markdown/images/h3.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..c7836cf09e4565cc76c13bd14c13971c9e093c40
+GIT binary patch
+literal 306
+zcmV-20nPr2P)<h;3K|Lk000e1NJLTq000mG000mO1ONa4wfZ;e00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUy#7RU!R4C8A
+z(6On*FcgL1!}9|dap0*E1guJ(I#(i%DuZ#8!eCF32{eHw$Of6<Zr};B$XVm2c*14M
+z@V6hQI8b~JUjb`bWtC-9%-bkQVi`hsdU4aSuyT=qpCnQdc3<3Xd4Pqt3Ze{D_+DY}
+zW<S7<^J~m0$2`0O6|T2(W|t2zbF2$NJQWJlcYDibs$gWQz{`a;n7g9we~DZ{VywW)
+zA5A{7y*A;8xGJDXCCVUSQ@G8Fk?zr!=7|TU?_K@5H&^lOO;W3B%K!iX07*qoM6N<$
+Ef<~`>wEzGB
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/h4.png b/markitup/sets/markdown/images/h4.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..4e929eaf583f10cf50eb1666ff6530b9d4cc7915
+GIT binary patch
+literal 293
+zcmeAS@N?(olHy`uVBq!ia0vp^0wB!60wlNoGJgf6SkfJR9T^zbpD<_bdI{u9mbgZg
+z1m~xflqVLYGB~E>C#5QQ<|d}62BjvZR2H60wE-&H?&;zfqH%ujg^j$;1_G=B-XbO(
+zon2btF4r#xDw?mmvtwaL3R_~+Yz66*rrQmiHySwec#9a-mn?F*9`VcnzTNDrbNY9(
+zxOA;CUb9S|sk-b7=Pc<<>lMA8+|AaBj(NoLhh2`-;+<K8{*2emHcRFoe&KFjR=k>F
+zenR#-z6;(Syt?;Ub#<ilk4_3^a;#zMWzxuwzL|7t`5Mmy-QEn6DfUn2)UN-q#Q$;F
+o^&^ZCr?-DKGAg+nKL5OQz`Bou%xAt&0eXSK)78&qol`;+06?>DVE_OC
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/h5.png b/markitup/sets/markdown/images/h5.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..30cabebf7445e168a0f31b0ed68c43d54eaf017d
+GIT binary patch
+literal 304
+zcmV-00nh%4P)<h;3K|Lk000e1NJLTq000mG000mO1ONa4wfZ;e00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUy!bwCyR4C8A
+z(6I@_Fc1aM0~anLf&~FXAgbJ{b0yNK5*Rlw4AKOdKoe*JZIB6WgG}H>ZVg9Hj*!Zw
+zxkAM~zCH&l><=6QeDdgV4l9hop+%GWq_IPV?Z641X8iiHrWJUN^2}hSiGjhsfbOLp
+z?d`9_MC0P3jVAVsE<n+R8WQ;jMsl1`!fAV@7O|!(FmPlUba<s!%P7k4RffpGl3}2*
+zAsJ6pZ~YPOA7E3dhPuS5P@1F2b*`R}U^wp7`|}2S*zCBx<I55N0000<MNUMnLSTYi
+CrhKjd
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/h6.png b/markitup/sets/markdown/images/h6.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..058170a20c3d9b9dccddc4d2f163c23b0139f5ff
+GIT binary patch
+literal 310
+zcmV-60m=S}P)<h;3K|Lk000e1NJLTq000mG000mO1ONa4wfZ;e00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUy$Vo&&R4C8A
+z(6NccFc1aM&pB{##$fh1MJp~)rp%FWqR3#JY+$e}xC&H(E4U6+!E~?{Y$LyoxnRY@
+zCJxO{-~1T{isRrEu<om@vTTZZ8zoBE6$&@lKXWY&D;IhCD1i#!I<eWbuN4b#1qA7-
+zaCa+jH{3Ws#uQUX{o{vjGBmlnH@R*Lm^qdSFW<DuP|;j#R=)*|j0HHk(4>wEMMb0n
+zB0~XIzS#Ls)<fk#h(Q5G+=KMuH-+7dbkgkgRAppL=e_zk|B^rJ`Fh)r$p8QV07*qo
+IM6N<$f@|V^`Tzg`
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/image.png b/markitup/sets/markdown/images/image.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..fc3c393caa3bc4371d12d0c67ffd6d333ecf1d8e
+GIT binary patch
+literal 516
+zcmV+f0{i`mP)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUzmPtfGR2Uhh
+z!9QzLVHn2Y-}9a~o}4PJgQuV<2;!!bi-MoP&B?(IB8cLay_0Ac(al-JNd$KXKZO)J
+z76W1<wnS>0oSgT$J*kO*Aq9I~CW*s{G*(t$KS{OS+#aO%?udUme<*TTEO`Fr@r_QT
+zk=#}u-n~>Vm!+9S1PE{@3<)G~CPb<$Za;W?3+O}|+q)?*Pn355=}S(XIZmEANjZci
+zf<Z6{!N`K~VdFiII`<eSGa8Y`U<4sV&YwHWh09mTLWY#UBA5}(FbjkbXk`I+eu_*v
+zkmqgM#W9eWM+guTktqkp)sXRU56qApSHeADfFv?Y)YSmVnTbqE@VWnyFTFlvuW=>5
+zj<%@MX^bD1^BwlS^+AD|$dm-1wial0hwPI;CDM?Y9SXW#@w-UF0SQ8OgplRTleOB2
+zUjkDS|0U9pI|lSN*EvXUa~*UIclJdZ#)Npbwh9>YT?Z;=B8|l&^t~P~om?<5Lre$+
+z;%`P>SL7`djY#8Y9$wv9dv|3p)<t&?l((RWyr5x{IE?Sp@~c)9n%N2f0000<MNUMn
+GLSTZ`ao24C
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/italic.png b/markitup/sets/markdown/images/italic.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..8482ac8cb1eb8bc8edbf64085108f0fbd204fadb
+GIT binary patch
+literal 223
+zcmeAS@N?(olHy`uVBq!ia0vp^0wB!60wlNoGJgf6SkfJR9T^zbpD<_bdI{u9mbgZg
+z1m~xflqVLYGB~E>C#5QQ<|d}62BjvZR2H60wE-$B^mK6y(Kw&{<9vg>Q9!g~ne(gm
+zmj4swoA@7?D86%i^8WzK9JM17E&sp&Z#dpHfz$E-U9ks&4?Z9Gyg!%0k2Q{M-Tz#>
+z2OnD>vrPZ*#{EHKLq)>Jcx{H|Ovdb&|4aQZWSipI{El%e^Cxx{^9vSw28s;a3IDB=
+TS1%U=TF&6<>gTe~DWM4fm>N^1
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/kbd.png b/markitup/sets/markdown/images/kbd.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..9a4d9cdf2a2a035de67cede3dcfcda0be2adb471
+GIT binary patch
+literal 1078
+zcmaJ=OK1~87+z5!6l+^h#Gb~jPi(TUrfHU@A<d>Xm<=HbG@zi{-AS^vyR+_2le8D>
+z0~!zFsbCL+kE<`}!9xyuw0ISY#eyPus8T(P7-!QY?ZG&(JM+(e-}nFj%(r(^$qU_G
+z{aqAAb;l>AG?{zd$FrZj&w6_@WIB#xIh;XxTvlvIMKm-GLEKOZFbx%L{@NNGrKtTt
+z&*pGWPKYWpe2R<lRSb);DQYxau@rR%VlWL0x*4K>)Lzp-*FyA^UuI=13XA&Wf(<hZ
+z$*j6CqXsoPJO)N9A`vhkRzSs=H65`Mq8qv*S-aZ|4H^(U6QXyD%E>7ZMK%O}AL~`w
+zVHON?K28`41OkJAXE~N(d4}V?TtF0fk!3-1&?K9!<;Ao#(ac4n5M9LB5*emkF8j)Y
+z57`BV3kHL(2G4s5!t2bNSgCkTXP~7ZK}WT93+u=PuA(xH=5UB6mF~1)SZ!I;X&w_f
+zFs7nd4CiCrmRdkr{y)?(+Gq!-;cmVE6n3)n7G%=UL36fBE-pXdrn1DS4Hb;+EJCxb
+zQ%n^RMotk~Ae!-mDc#gi*=e9<S&W+wR!kMfr4UW{K3&(ufG`r_V!XfwqZ1q#6UO}l
+z8|3&Ao*m}dAj`G55>n?3XyO)E+vN^*<hn*MERtD*wqAnTgpCZ)Xjs%c*TQwwYjU;D
+zweTIe3@L_juXWEgx3-9P+-2LeBxu_nn#AiiG4=Y^)KT(7cvFdNjM%ELuaBnb?d|Q&
+z&CQjSl~Sn`4u@;CTD4l0Bq^WI3xYu4^?E&g<ltAb>cQz`hJ<?t_5S1iN90p3E=97H
+zji>h_hZkATfs2=x&0~M+m-TP4FKcga++O>B`sDS*FDjuvxpHRXJm{&Om|fjREftr&
+z>-x(Vp2266p7O&7rxyEHUw!!eX>6<OuJZfmyK`@-$E8DsTdCe9l7ouJlG5|>t2h4w
+DoB?8+
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/link.png b/markitup/sets/markdown/images/link.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..25eacb7c2524142262d68bf729c5e2b61adfd6d4
+GIT binary patch
+literal 343
+zcmV-d0jU0oP)<h;3K|Lk000e1NJLTq000mG000mO1ONa4wfZ;e00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUy=}AOER4C75
+z_|JeJGSEqZ9d}k~>$`dXYaZs9=SbAto%g@>T~?_bH&lTUn@`uo|1bXE{eSR(<Gt!b
+zH-Fsyf8_tf|2|ztY+wb3e#IZIzKhuA{U`PRr2m!wQ~!JaiP*N{Vetn;KZprkP2VS{
+z`*YcU-uwUD|3m-R{<r_^&ow!{>AO)ESb=V4`uk}mK|39Px&03WLbv~pzk+s7D@lK^
+zn+aB+sp)&Y_x-B3>;6ywU--WQNUr<8>TU0P-|L#1U<GQ-_6A<}Q@&(>&;A)67w(+>
+pDf@fM7q9#F25QXo3rUI;002ro52U44e~JJA002ovPDHLkV1l;_q@Mr)
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/ol.png b/markitup/sets/markdown/images/ol.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..33b0b8df394dd66b20f74b551d5d52eb53cf335d
+GIT binary patch
+literal 357
+zcmV-r0h<1aP)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUy_en%SR5;6H
+z`2YVu10@(t<jjApvgq);|705g(oB&7FhgMM^78U*ApT!cQu4o`px}RYcJ}|&)YSh8
+z2?_rrBP0I@2M7Ph>VicFNp}SURRVGD{<r^U?Rot_V&Xj&vRx3`drzfz%S-aS5Y%-?
+zrE}ABxaPRHxa^3Ci2s3sf&aa{y#6~oJO8(_vH5ReV)9>CSNFe~ni^^#wyl5uzj4je
+z|23<g4p1PLFMIsIbm`;&#fu-4?*fo!>%2?k#{x(*%mqe9M%mih+W%ElRQ}7!$^91>
+z7ymCLB=nz$hvz>#JNtiTW@gkt1Zf0eyP_){bPq%T_kY#2Z7&xs00000NkvXXu0mjf
+DNYA0=
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/picture.png b/markitup/sets/markdown/images/picture.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..4a158fef7e0da8fd19525f574f2c4966443866cf
+GIT binary patch
+literal 606
+zcmV-k0-^nhP)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUz@JU2LR5;6}
+zlRaxxK@^6cGxy%T_a+Owkd0v@QIddQ5yVtR|A2*sja5=uNcw<{Kf>Q2rnAt>LM%-F
+zK|rtwgcU)}7x~z1Hrcs5bH*ZO$!>xO8K#?==bZPQ_ecnV>#P`H`QzGaRhd62G_&rC
+zTLU$c7_x*nFP_dW#Q+*);mM<k(JaeEB>HE?j)HexK784D4x9l_tfpz2$@1y}9rkF+
+zI+J5N<Vh13l>MWeZyObc!d+rUc=>D+uOdAOg#%+Ej6h+wn5^xPmVVH*Eu446Y0A_@
+zo$rlds-+sL10Db<V2ohHE~Vsv!_y|#cPO00g*IuL(zZDxxgijG#`FV32u`uSOUGGG
+zyOu&7UIFP6)Ds)w;?J3$(cuh`F-ogFOd!Fk$2yNliFT_@xin4`83=M&LI`IP%F#`J
+zZEaJ@HW?Z=q~bW<A7Xo}PQ5ZkY~*qd!bL!GgYo=6Ki5{MmVYDOlXOP8HN8MNtK(Js
+zV$s*Z`raa56|c%2yUX0fZ4_v1Zu9B*6?&woD)4!rgAfql@$6FXAeuSkq`gPB`IXwk
+zMdqWVFPY~)#sG3fUVUE0=T&TN`ieXbn3yHfM7x!HV-G;&FDjhxOOKr^h$9I-Kq;1Y
+s?^hagg%30TGn{b*iQz4PTz8!R00wW`ldl!TzW@LL07*qoM6N<$g6(7tz5oCK
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/preview.png b/markitup/sets/markdown/images/preview.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..a9925a06ab02db30c1e7ead9c701c15bc63145cb
+GIT binary patch
+literal 537
+zcmV+!0_OdRP)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUzt4TybR5;7M
+zli4mqVHAaX=Q!_TZq*o5LaK&TC+g@aMJbINs;8}1t3yf*$E6r*j>Hs{AQG2a)rMyf
+zFQK~pm1x3+7!nu%-M`k}``c>^00{o_1pjWJUTfl8mg=3qGEl8H@}^@w`VUx0_$uy4
+z2FhRqKX}xI*?Tv<H&*Dj)Tr<j*}f%KtVns|p$^k=7pCG)bZ)nz(p!uYhmcBtGG4MZ
+zhBKz;vsk_?<x?$B#+(Sm9B-A&-Qq;?SOJwD!Fa)z^`0_M+_eepu5##IOknYS`&tC<
+z#^ArRgWXi2%vG2uvgcE2i2di<+TKw6qc6;1IyMf?mMlSF4apWIQ-(bTzNj7ETMiu?
+z3Y3nE5@K5(^<j-YCz?$CVH?a>1DJd8z#F#0c%*~rM30HE1@2o5m~}ZyoWhqv>ql{V
+z1ZGE0lgcoK^lx+eqc*rAX1Ky;Xx3U%u#zG!m-;eD1Qsn@kf3|F9qz~|95=&g3(7!X
+zB}JAT>RU;a%vaNOGnJ%e1=K6eAh43c(QN8RQ6~GP%O}Jju$~Ld*%`mO1p<rCAIZx2
+bmuq|lzM`o-QVIh|00000NkvXXu0mjfO@{7Q
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/quotes.png b/markitup/sets/markdown/images/quotes.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..e54ebebafb5072fabac9a0f3d8a79fcee3265f9f
+GIT binary patch
+literal 743
+zcmV<D0vP>?P)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBU!c}YY;R5;6h
+zl5I#+Q5eUkMo1Xc5~44CG7?IOtSIY)5JBY&X3H(jaB38~p!u>vCi#|P&Xm-dkucwL
+z3)87{8iWe96huvPHfK`KOdC2Z({T6vJ9pwDx$D4>d(Pqff6w7Lmj{5i6;ZyPPpPN;
+zroaW=6d#@oL2Fa53F~$Su10(RG%K0p3VTuP3?Z=nBA8z$uq+XLUL^QrC74`bU|!e|
+zr>hK{)%Q!vdmIO5Z3JIvaOyjOX`X@c8-ua03`Q&)f&%p*{(A$q`ZTTjk%q_T7>v^J
+zu!R-a9fFLScYlKkNBP_Cob=9m9J<?fOP06J_JEaa4)!L)GmJyZ*#r3*zEm0P3B|?j
+zC=%>LVoC-?c{)eOtMnh7qNN{ejy2sM{pS^mgFHJm@(buuM4>=<5Vr$&Kzw{B?uPr;
+z(1Yf=#g)zADkWnx=M<Di?5UnHsIffMg!eBVpkF1!P|G8vWGY4~bz^MsCq=roXU@r$
+z5JBohV;Wf<Zv{+RtQp(UUzbiqxmqg?CUE^PPQl)g1`l39#S?XLHknl2#6(>R%ykl|
+z3Ui42k+O2{bCn)01-s5Sxp|z{<jPB@7`+vcYu`euHb7Esz_Vc>G2di&KT(_M6;$EI
+zDL57JFf}cw4bP1P$pgTRKH$0@h|~aA>j`qZ2*k<FBrx=zj8iaMcnAaPQY5M85!(U8
+zXb6Ng1QAsPVNU^pVgZBAN=#+@f>U5t2EVD5#~@VNhqx{vz8ethDD-=+1vnemftUBA
+zF;N!Q%PBB5B=KLB#QO(CHe?;R+-C8M?ppDW>R$5`cCPq@YpusFRTaH1i9Kv;l<>I(
+Ze*oTy+;kdDB`N>_002ovPDHLkV1l3CM+g7_
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/stroke.png b/markitup/sets/markdown/images/stroke.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..612058a78eba4e3ca259aa13417fd60cd6cf2fbd
+GIT binary patch
+literal 269
+zcmeAS@N?(olHy`uVBq!ia0vp^0wB!60wlNoGJgf6SkfJR9T^zbpD<_bdI{u9mbgZg
+z1m~xflqVLYGB~E>C#5QQ<|d}62BjvZR2H60wE-%c@9E+gqH#X?$N2_%qkv$?&V++!
+z-fX$@sb%KG-5a$|R8J4(Tcmu7`G0cYgxS-++3#dN^zA^J(=P8r|6lx9G_LLaZ+v5S
+z!d9iC@)!RP{FnQmdw#}3Ee(C$|NPA#|L6YmR@f<hlBM2}BX`QO+Uqa&-;w0ezH{l#
+z>BO9w|C7oMMQ$vc`Tu(RETvC<`(>OPJ!ieM-fH~m>7>j<Pxr{0baB5CV2HN*V}HT2
+RyaVV|22WQ%mvv4FO#ou1b4&mL
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/images/ul.png b/markitup/sets/markdown/images/ul.png
+new file mode 100755
+index 0000000000000000000000000000000000000000..4a8672bde48f806d3d4d37db192588a9aa3eac10
+GIT binary patch
+literal 344
+zcmV-e0jK_nP)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV00004XF*Lt006JZ
+zHwB960000PbVXQnQ*UN;cVTj606}DLVr3vnZDD6+Qe|Oed2z{QJOBUy>PbXFR5;6H
+z`2YVu10|S&DhA}te_Swi*Xsu$nk)lAnzx?+_#Z@r_~qs0*+Bfiq@?73K|#U)?Ck9S
+zsi~>|6A}{sM@B~e4-O9gPhA%bd?2RGd{of6>E(lvp1b6Ep>6&12TPB<{a?EDDL4@0
+z;^ML+A|n0=1_u83^78uc?CkvC#>VEqiHXU7U0vP(YHDhzff&$ntDt1@;|H#l*M@2!
+z+U8#>h@W=vfpy*`^1J}j+`sMRe-I7g8yOj8Yin!&S5Z;<FDEDWUtC=LzmSm7e;yv5
+q|LpAS|CyPYQ3DZVGes_-1OotI5YRuK@!O&R0000<MNUMnLSTY8q@Gy-
+
+literal 0
+HcmV?d00001
+
+diff --git a/markitup/sets/markdown/readme.txt b/markitup/sets/markdown/readme.txt
+new file mode 100755
+index 0000000000000000000000000000000000000000..790fe7a2d8399021a6e6cdbf9fe91f7fa0a564d9
+--- /dev/null
++++ b/markitup/sets/markdown/readme.txt
+@@ -0,0 +1,11 @@
++Markup language: 
++Markdown
++
++Description:
++A basic Markdown markup set with Headings, Bold, Italic, Picture, Link, List, Quotes, Code, Preview button.
++
++Install:
++- Download the zip file
++- Unzip it in your markItUp! sets folder
++- Modify your JS link to point at this set.js
++- Modify your CSS link to point at this style.css
+\ No newline at end of file
+diff --git a/markitup/sets/markdown/set.js b/markitup/sets/markdown/set.js
+new file mode 100755
+index 0000000000000000000000000000000000000000..96970a451903f3e2fb61c7afcb029fc67444ed58
+--- /dev/null
++++ b/markitup/sets/markdown/set.js
+@@ -0,0 +1,52 @@
++// -------------------------------------------------------------------
++// markItUp!
++// -------------------------------------------------------------------
++// Copyright (C) 2008 Jay Salvat
++// http://markitup.jaysalvat.com/
++// -------------------------------------------------------------------
++// MarkDown tags example
++// http://en.wikipedia.org/wiki/Markdown
++// http://daringfireball.net/projects/markdown/
++// -------------------------------------------------------------------
++// Feel free to add more tags
++// -------------------------------------------------------------------
++mySettings = {
++	previewParserPath:	'',
++	onShiftEnter:		{keepDefault:false, openWith:'\n\n'},
++	markupSet: [
++		{name:'First Level Heading', key:'1', placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '=') } },
++		{name:'Second Level Heading', key:'2', placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '-') } },
++		{name:'Heading 3', key:'3', openWith:'### ', placeHolder:'Your title here...' },
++		{name:'Heading 4', key:'4', openWith:'#### ', placeHolder:'Your title here...' },
++		{name:'Heading 5', key:'5', openWith:'##### ', placeHolder:'Your title here...' },
++		{name:'Heading 6', key:'6', openWith:'###### ', placeHolder:'Your title here...' },
++		{separator:'---------------' },		
++		{name:'Bold', key:'B', openWith:'**', closeWith:'**'},
++		{name:'Italic', key:'I', openWith:'_', closeWith:'_'},
++		{separator:'---------------' },
++		{name:'Bulleted List', openWith:'- ' },
++		{name:'Numeric List', openWith:function(markItUp) {
++			return markItUp.line+'. ';
++		}},
++		{separator:'---------------' },
++		{name:'Picture', key:'P', replaceWith:'![[![Alternative text]!]]([![Url:!:http://]!] "[![Title]!]")'},
++		{name:'Link', key:'L', openWith:'[', closeWith:']([![Url:!:http://]!] "[![Title]!]")', placeHolder:'Your text to link here...' },
++		{separator:'---------------'},	
++		{name:'Quotes', openWith:'> '},
++		{name:'Code Block / Code', openWith:'(!(\t|!|`)!)', closeWith:'(!(`)!)'},
++		{separator:'---------------'},
++		{name:'Preview', call:'preview', className:"preview"}
++	]
++}
++
++// mIu nameSpace to avoid conflict.
++miu = {
++	markdownTitle: function(markItUp, char) {
++		heading = '';
++		n = $.trim(markItUp.selection||markItUp.placeHolder).length;
++		for(i = 0; i < n; i++) {
++			heading += char;
++		}
++		return '\n'+heading;
++	}
++}
+\ No newline at end of file
+diff --git a/markitup/sets/markdown/style.css b/markitup/sets/markdown/style.css
+new file mode 100755
+index 0000000000000000000000000000000000000000..03c3aea442006f1069d664fa501b1d1295106cd2
+--- /dev/null
++++ b/markitup/sets/markdown/style.css
+@@ -0,0 +1,54 @@
++/* -------------------------------------------------------------------
++// markItUp!
++// By Jay Salvat - http://markitup.jaysalvat.com/
++// ------------------------------------------------------------------*/
++.markItUp .markItUpButton1 a {
++	background-image:url(images/h1.png); 
++}
++.markItUp .markItUpButton2 a {
++	background-image:url(images/h2.png); 
++}
++.markItUp .markItUpButton3 a {
++	background-image:url(images/h3.png); 
++}
++.markItUp .markItUpButton4 a {
++	background-image:url(images/h4.png); 
++}
++.markItUp .markItUpButton5 a {
++	background-image:url(images/h5.png); 
++}
++.markItUp .markItUpButton6 a {
++	background-image:url(images/h6.png); 
++}
++
++.markItUp .markItUpButton7 a {
++	background-image:url(images/bold.png);
++}
++.markItUp .markItUpButton8 a {
++	background-image:url(images/italic.png);
++}
++
++.markItUp .markItUpButton9 a {
++	background-image:url(images/list-bullet.png);
++}
++.markItUp .markItUpButton10 a {
++	background-image:url(images/list-numeric.png);
++}
++
++.markItUp .markItUpButton11 a {
++	background-image:url(images/picture.png); 
++}
++.markItUp .markItUpButton12 a {
++	background-image:url(images/link.png);
++}
++
++.markItUp .markItUpButton13 a	{
++	background-image:url(images/quotes.png);
++}
++.markItUp .markItUpButton14 a	{
++	background-image:url(images/code.png);
++}
++
++.markItUp .preview a {
++	background-image:url(images/preview.png);
++}
+\ No newline at end of file
