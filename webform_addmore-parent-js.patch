@@ -1,13 +1,164 @@
 diff --git a/js/webform_addmore.js b/js/webform_addmore.js
-index d2e3be1..cbe5ec7 100644
+index d2e3be1..750fce8 100644
 --- a/js/webform_addmore.js
 +++ b/js/webform_addmore.js
-@@ -68,7 +68,7 @@ function fieldsetRepeater(container, fieldsetSelecter, addBtnTxt, delBtnTxt, num
+@@ -11,107 +11,76 @@ function fieldsetRepeater(container, fieldsetSelecter, addBtnTxt, delBtnTxt, num
+         collections.push('');
+       }
  
-           var hiddenFieldsets = $('#' + parent_id + ' ' + fieldsetSelecter).not(':visible');
- 
+-      for (index in collections) {
+-        if (collections[index].length == 0) {
++      for (var index in collections) {
++        if (collections.hasOwnProperty(index)) {
+           var parent_fieldset_selector = fieldsetSelecter;
+-        }
+-        else {
+-          var parent_fieldset_selector = '#' + collections[index] + ' ' + fieldsetSelecter;
+-        }
+-        //console.debug('parent_fieldset_selector: %o', parent_fieldset_selector);
+-        var add_more_button_id = 'webform-addmore-' + collections[index];
+-        var del_more_button_id = 'webform-addmore-del-' + collections[index];
+-        var addBtn = $('<input type="button" id="' + add_more_button_id + '" class="add-more button white" />').val(addBtnTxt);
+-        addBtn.click(function() {
+-          var parent_fieldset = $(this).parents('fieldset');
+-          if (parent_fieldset.length > 0) {
+-            var parent_id = parent_fieldset.attr('id');
+-            var hiddenFieldsets = $('#' + parent_id + ' ' + fieldsetSelecter).not(':visible');
+-          }
+-          else {
+-            var hiddenFieldsets = fieldsets.not(':visible');
+-          }
+-
+-          var next = hiddenFieldsets.filter(':first');
+-          next.fadeIn();
+-          var delBtn = $('<input type="button" class="del-btn button white" />').val('Remove');
+-          $(next).append(delBtn);
+-
+-          if(hiddenFieldsets.size() < 2) {
+-            $(this).hide();
+-          }
+-
+-        });
+-
+-
+-      $('.del-btn').livequery(function(){
+-        $('.del-btn').click(function() {
+-          var parent_fieldset = $(this).parent();
+-          parent_fieldset.find(':input').val('');
+-          parent_fieldset.find('.del-btn').remove();
+-          parent_fieldset.hide();
+-
+-
+-          // We need to rescan the page for shown fieldsets
+-          if (parent_fieldset.length > 0) {
+-            var parent_id = parent_fieldset.attr('id');
+-            var shownFieldsets = $('#' + parent_id + ' ' + fieldsetSelecter).not(':hidden');
+-
+-          }
+-          else {
+-            var shownFieldsets = fieldsets.not(':hidden');
+-          }
+-
+-          if(shownFieldsets.size() < 2) {
+-            $(this).hide();
+-          }
+-
+-          var hiddenFieldsets = $('#' + parent_id + ' ' + fieldsetSelecter).not(':visible');
+-
 -          var cont = parent_fieldset.parent().parent();
-+          var cont = parent_fieldset.parent();
+-
+-          $(cont).append(addBtn);
+-          addBtn.show();
++          if (collections[index].length !== 0) {
++            parent_fieldset_selector = '#' + collections[index] + ' ' + parent_fieldset_selector;
++          }
++          var add_more_button_id = 'webform-addmore-' + collections[index];
++          var addBtn = $('<input type="button" id="' + add_more_button_id + '" class="add-more button white" />').val(addBtnTxt);
++          addBtn.click(function() {
++            var parent_fieldset = $(this).parents('fieldset');
++            var hiddenFieldsets;
++            if (parent_fieldset.length > 0) {
++              var parent_id = parent_fieldset.attr('id');
++              hiddenFieldsets = $('#' + parent_id + ' ' + fieldsetSelecter).not(':visible');
++            }
++            else {
++              hiddenFieldsets = fieldsets.not(':visible');
++            }
++
++            var next = hiddenFieldsets.filter(':first');
++            next.fadeIn();
++            var delBtn = $('<input type="button" class="del-btn button white" />').val('Remove');
++            $(next).append(delBtn);
++          });
++
++
++        $('.del-btn').livequery(function(){
++          $('.del-btn').click(function() {
++            var parent_fieldset = $(this).parent();
++            parent_fieldset.find(':input').val('');
++            parent_fieldset.find('.del-btn').remove();
++            parent_fieldset.hide();
++          });
+         });
+-      });
+-
+-        var fieldsets = container.find(parent_fieldset_selector)
+-          .not(container.find(parent_fieldset_selector + ' ' + parent_fieldset_selector))
+-          .hide();
  
-           $(cont).append(addBtn);
-           addBtn.show();
+-        fieldsets.filter(':last').after($('<div/>').append(addBtn));
+-        var count = 0;
+-        $.each(fieldsets, function(i, fieldset){
+-          var val = $(fieldset).find(':input').val();
+-          if (val.length > 0){
+-            count += 1;
+-          }
+-        })
+-        if (count > 1) {
+-          for( var i = 0; i < count; i++ ) {
+-            addBtn.click();
+-          }
+-        }
+-        else {
+-          for( var i = 0; i < numberFirstShown; i++ ) {
++          var fieldsets = container.find(parent_fieldset_selector)
++            .not(container.find(parent_fieldset_selector + ' ' + parent_fieldset_selector))
++            .hide();
++
++          fieldsets.filter(':last').after($('<div/>').append(addBtn));
++          var count = 0;
++          $.each(fieldsets, function(i, fieldset){
++            var val = $(fieldset).find(':input').val();
++            if (val.length > 0){
++              count += 1;
++            }
++          });
++          if (count <= 0) {
++            count = numberFirstShown;
++          }
++          for (var i = 0; i < count; i++ ) {
+             addBtn.click();
+           }
+         }
+       }
+     }
+ 
+-    Drupal.settings.webform_addmore.collections = new Array();
++    Drupal.settings.webform_addmore.collections = [];
+     $.each(
+       Drupal.settings.webform_addmore.fieldsets,
+       function(i, fieldset) {
+-        var parent_fieldset = $('#' + fieldset).parents('fieldset');
++        var $fieldset = $('#' + fieldset);
++        var parent_fieldset = $fieldset.parents('fieldset');
+         if (parent_fieldset.length > 0) {
+           var parent_id = parent_fieldset.attr('id');
+           if ($.inArray(parent_id, Drupal.settings.webform_addmore.collections) < 0) {
+             Drupal.settings.webform_addmore.collections.push(parent_id);
+           }
+         }
+-        $('#' + fieldset).addClass('webform-addmore');
++        $fieldset.addClass('webform-addmore');
+       }
+     );
+ 
