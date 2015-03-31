@@ -1,0 +1,20 @@
+diff --git a/.htaccess b/.htaccess
+index 7ccb6a2..bab43c9 100644
+--- a/.htaccess
++++ b/.htaccess
+@@ -107,7 +107,14 @@ DirectoryIndex index.php index.html index.htm
+   #
+   # If your site is running in a VirtualDocumentRoot at http://example.com/,
+   # uncomment the following line:
+-  # RewriteBase /
++  RewriteBase /
++
++  RewriteCond %{REQUEST_URI} /library/articles/[a-z]*/links/.*\.html$
++  RewriteRule ^(.*)\.html$ $1 [R=301,L]
++
++  # Rewrite jacksonlibary urls
++  RewriteRule ^jacksonlibrary/images/(.*)$ /sites/default/files/library_migration/library/images/$1 [R=301,L]
++  RewriteRule ^jacksonlibrary/(.*)$ /library/$1 [R=301,L]
+ 
+   # Pass all requests not referring directly to files in the filesystem to
+   # index.php. Clean URLs are handled in drupal_environment_initialize().
