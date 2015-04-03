@@ -1,17 +1,17 @@
 diff --git a/markitup/jquery.markitup.js b/markitup/jquery.markitup.js
-index e43b33e..38ccd14 100644
+index b7e2d03..5b452e0 100755
 --- a/markitup/jquery.markitup.js
 +++ b/markitup/jquery.markitup.js
 @@ -217,7 +217,11 @@
-             }).bind('click.markItUp', function(e) {
-               e.preventDefault();
-             }).bind("focusin.markItUp", function(){
+ 						}).bind('click.markItUp', function(e) {
+ 							e.preventDefault();
+ 						}).bind("focusin.markItUp", function(){
 -                            $$.focus();
-+              var focusedElementTop = (window.pageYOffset || $$.scrollTop)  - ($$.clientTop || 0);
-+              var inElementTop = $$.scrollTop();
-+              $$.focus();
-+              $('body').scrollTop(focusedElementTop);
-+              $$.scrollTop(inElementTop);
-             }).bind('mouseup', function() {
-               if (button.call) {
-                 eval(button.call)();
++                                                        var focusedElementTop = (window.pageYOffset || $$.scrollTop)  - ($$.clientTop || 0);
++                                                        var inElementTop = $$.scrollTop();
++                                                        $$.focus();
++                                                        $('body').scrollTop(focusedElementTop);
++                                                        $$.scrollTop(inElementTop);
+ 						}).bind('mouseup', function() {
+ 							if (button.call) {
+ 								eval(button.call)();
