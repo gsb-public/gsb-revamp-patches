@@ -1,7 +1,7 @@
-diff --git a/jquery.markitup.js b/jquery.markitup.js
+diff --git a/markitup/jquery.markitup.js b/markitup/jquery.markitup.js
 index e43b33e..38ccd14 100644
---- a/jquery.markitup.js
-+++ b/jquery.markitup.js
+--- a/markitup/jquery.markitup.js
++++ b/markitup/jquery.markitup.js
 @@ -217,7 +217,11 @@
              }).bind('click.markItUp', function(e) {
                e.preventDefault();
