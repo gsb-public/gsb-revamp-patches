@@ -1,0 +1,13 @@
+diff --git a/views_content/plugins/views/views_content_plugin_display_panel_pane.inc b/views_content/plugins/views/views_content_plugin_display_panel_pane.inc
+index 161efc8..f047bf9 100644
+--- a/views_content/plugins/views/views_content_plugin_display_panel_pane.inc
++++ b/views_content/plugins/views/views_content_plugin_display_panel_pane.inc
+@@ -604,7 +604,7 @@ class views_content_plugin_display_panel_pane extends views_plugin_display {
+       $this->set_option('pager', $pager);
+     }
+ 
+-    if (in_array($this->get_option('row_plugin'), array('node', 'entity'))) {
++    if (in_array($this->get_option('row_plugin'), array('node', 'entity', 'ds'))) {
+      if ($allow['set_view_mode']) {
+        if ($conf['view_mode']) {
+          $row_options = $this->get_option('row_options');
