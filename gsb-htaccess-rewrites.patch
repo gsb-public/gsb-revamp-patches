@@ -1,8 +1,8 @@
 diff --git a/.htaccess b/.htaccess
-index 7ccb6a2..7443e2f 100644
+index 7ccb6a2..d03d644 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -107,7 +107,19 @@ DirectoryIndex index.php index.html index.htm
+@@ -107,7 +107,24 @@ DirectoryIndex index.php index.html index.htm
    #
    # If your site is running in a VirtualDocumentRoot at http://example.com/,
    # uncomment the following line:
@@ -20,6 +20,11 @@ index 7ccb6a2..7443e2f 100644
 +  RewriteCond %{HTTP_HOST} ^startup.gsb.stanford.edu [NC,OR]
 +  RewriteCond %{HTTP_HOST} ^www.startup.gsb.stanford.edu [NC]
 +  RewriteRule ^(.*)$ http://www.gsb.stanford.edu/ces [L,R=301,NC]
- 
++
++  # Rewrite CSI
++  RewriteCond %{HTTP_HOST} ^csi.gsb.stanford.edu [NC,OR]
++  RewriteCond %{HTTP_HOST} ^www.csi.gsb.stanford.edu [NC]
++  RewriteRule ^(.*)$ http://www.gsb.stanford.edu/faculty-research/centers-initiatives/csi/$1 [L,R=301,NC]
+
    # Pass all requests not referring directly to files in the filesystem to
    # index.php. Clean URLs are handled in drupal_environment_initialize().
