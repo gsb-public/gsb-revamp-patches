@@ -22,7 +22,7 @@ index 1936232..8f97569 100644
 +      break;
 +    }
 +  }
-+  drupal_add+js($javascript);
++  drupal_add_js($javascript);
 +  drupal_add_js($tagmap, 'setting');
 +}
 +
