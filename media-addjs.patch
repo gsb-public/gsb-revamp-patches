@@ -2,18 +2,18 @@ diff --git a/includes/media.filter.inc b/includes/media.filter.inc
 index 1936232..8f97569 100644
 --- a/includes/media.filter.inc
 +++ b/includes/media.filter.inc
-@@ -453,11 +453,25 @@ function media_pre_render_text_format($element) {
+@@ -453,11 +453,24 @@ function media_pre_render_text_format($element) {
    $tagmap = _media_generate_tagMap($field['#value']);
  
    if (isset($tagmap)) {
 -    drupal_add_js(array('tagmap' => $tagmap), 'setting');
-+   _media_add_js(array('tagmap' => $tagmap));
++    _media_add_js(array('tagmap' => $tagmap));
    }
    return $element;
  }
  
 +function _media_add_js($tagmap) {
-+  $javascript = &drupal_get_js();
++  $javascript = &drupal_add_js();
 +  foreach($javascript['settings']['data'] as $key => $value) {
 +    $found = array_key_exists('tagmap', $value);
 +    if ($found) {
@@ -22,7 +22,6 @@ index 1936232..8f97569 100644
 +      break;
 +    }
 +  }
-+  drupal_add_js($javascript);
 +  drupal_add_js($tagmap, 'setting');
 +}
 +
