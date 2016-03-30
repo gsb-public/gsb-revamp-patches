@@ -33,7 +33,7 @@ index 05de60d..8bf1967 100755
 +            });
          }
      };
- 
+
      /* Methode for add +1 to a counter
       ================================================== */
 -    Plugin.prototype.simulateClick = function () {
@@ -47,7 +47,7 @@ index 05de60d..8bf1967 100755
 +          $('.'+className).html(html.replace(this.options.total, this.options.total + 1));
 +        }
      };
- 
+
      /* Methode for add +1 to a counter
 diff --git a/src/js/platform/delicious.js b/src/js/platform/delicious.js
 index 8ff5c75..76a92b8 100755
