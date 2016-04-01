@@ -33,7 +33,7 @@ index 05de60d..8bf1967 100755
 +            });
          }
      };
-
+ 
      /* Methode for add +1 to a counter
       ================================================== */
 -    Plugin.prototype.simulateClick = function () {
@@ -47,7 +47,7 @@ index 05de60d..8bf1967 100755
 +          $('.'+className).html(html.replace(this.options.total, this.options.total + 1));
 +        }
      };
-
+ 
      /* Methode for add +1 to a counter
 diff --git a/src/js/platform/delicious.js b/src/js/platform/delicious.js
 index 8ff5c75..76a92b8 100755
@@ -78,9 +78,15 @@ index 80fd782..028512b 100755
          trackingAction: {site: 'digg', action: 'add'},
          load: function (self) {
 diff --git a/src/js/platform/facebook.js b/src/js/platform/facebook.js
-index 2cdaae6..a668445 100755
+index 2cdaae6..35139a3 100755
 --- a/src/js/platform/facebook.js
 +++ b/src/js/platform/facebook.js
+@@ -1,4 +1,4 @@
+-SharrrePlatform.register("facebook", function (options) {
++SharrrePlatform.register("facebook", function ($, options) {
+     defaultSettings = { //http://developers.facebook.com/docs/reference/plugins/like/
+         url: '',  //if you need to personalize url button
+         urlCount: false,  //if you want to use personnalize button url on global counter
 @@ -24,9 +24,11 @@ SharrrePlatform.register("facebook", function (options) {
      return {
          settings: defaultSettings,
@@ -134,9 +140,15 @@ index 2cdaae6..a668445 100755
                      //console.log('ok');
                      clearInterval(fb);
 diff --git a/src/js/platform/linkedin.js b/src/js/platform/linkedin.js
-index 13a07fb..d6f74a3 100755
+index 13a07fb..366349d 100755
 --- a/src/js/platform/linkedin.js
 +++ b/src/js/platform/linkedin.js
+@@ -1,4 +1,4 @@
+-SharrrePlatform.register("linkedin", function (options) {
++SharrrePlatform.register("linkedin", function ($, options) {
+     defaultSettings = {  //http://developer.linkedin.com/plugins/share-button
+         url: '',  //if you need to personalize url button
+         urlCount: false,  //if you want to use personnalize button url on global counter
 @@ -14,7 +14,8 @@ SharrrePlatform.register("linkedin", function (options) {
      return {
          settings: defaultSettings,
@@ -176,10 +188,30 @@ index 327cfa3..81625ac 100755
          },
          trackingAction: {site: 'pinterest', action: 'pin'},
          load: function (self) {
+diff --git a/src/js/platform/platform.js b/src/js/platform/platform.js
+index e9d9391..41465e3 100644
+--- a/src/js/platform/platform.js
++++ b/src/js/platform/platform.js
+@@ -10,7 +10,7 @@ var SharrrePlatform = SharrrePlatform || (function () {
+                 console.error("Sharrre - No platform found for " + name);
+                 return false;
+             }
+-            return new platforms[name](options);
++            return new platforms[name](window.jQuery, options);
+         }
+     }
+ })();
+\ No newline at end of file
 diff --git a/src/js/platform/twitter.js b/src/js/platform/twitter.js
-index 6e14d24..6095fc9 100755
+index 6e14d24..c42880d 100755
 --- a/src/js/platform/twitter.js
 +++ b/src/js/platform/twitter.js
+@@ -1,4 +1,4 @@
+-SharrrePlatform.register("twitter", function (options) {
++SharrrePlatform.register("twitter", function ($, options) {
+     defaultSettings = {  //http://twitter.com/about/resources/tweetbutton
+         url: '',  //if you need to personalize url button
+         urlCount: false,  //if you want to use personnalize button url on global counter
 @@ -18,7 +18,8 @@ SharrrePlatform.register("twitter", function (options) {
          settings: defaultSettings,
          trackingAction: {site: 'twitter', action: 'tweet'},
