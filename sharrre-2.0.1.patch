@@ -203,7 +203,7 @@ index e9d9391..41465e3 100644
  })();
 \ No newline at end of file
 diff --git a/src/js/platform/twitter.js b/src/js/platform/twitter.js
-index 6e14d24..c42880d 100755
+index 6e14d24..81a6793 100755
 --- a/src/js/platform/twitter.js
 +++ b/src/js/platform/twitter.js
 @@ -1,4 +1,4 @@
@@ -237,3 +237,12 @@ index 6e14d24..c42880d 100755
                          }
                      });
                      clearInterval(tw);
+@@ -58,7 +65,7 @@ SharrrePlatform.register("twitter", function (options) {
+         },
+         popup: function (opt) {
+             window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(opt.text) + "&url="
+-            + encodeURIComponent((this.settings.url !== '' ? this.setting.url : opt.url))
++            + encodeURIComponent((this.settings.url !== '' ? this.settings.url : opt.url))
+             + (this.settings.via !== '' ? '&via=' + this.settings.via : ''), "", "toolbar=0, status=0,width=" + this.settings.popup.width + ", height=" + this.settings.popup.height);
+         }
+     }
