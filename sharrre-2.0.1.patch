@@ -243,7 +243,7 @@ index 6e14d24..fc3c686 100755
          popup: function (opt) {
 +            if (this.settings.url !== '') {
 +                var shortUrl = $('.short-url').text();
-+                this.settings.url = shortUrl; //this.settings.url.replace('//opensharecount.com/count.json?url=', '');
++                this.settings.url = this.settings.url.replace('//opensharecount.com/count.json?url=', '');
 +            }
              window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(opt.text) + "&url="
 -            + encodeURIComponent((this.settings.url !== '' ? this.setting.url : opt.url))
