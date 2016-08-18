@@ -1,5 +1,5 @@
 diff --git a/webform_to_gdocs.module b/webform_to_gdocs.module
-index fca3bab..36c6c43 100644
+index fca3bab..1a7be2f 100644
 --- a/webform_to_gdocs.module
 +++ b/webform_to_gdocs.module
 @@ -95,7 +95,12 @@ function webform_to_gdocs_webform_submission_insert($node, $submission) {
@@ -14,5 +14,14 @@ index fca3bab..36c6c43 100644
 +        }
 +        $insert_value = implode(', ', (array)$multi_select);
          break;
-
+ 
        default:
+@@ -119,7 +124,7 @@ function webform_to_gdocs_webform_submission_insert($node, $submission) {
+   $google_row['webform_uid'] = $submission->uid;
+   $google_row['webform_username'] = isset($submission->name) ? $submission->name : 'Anonymous';
+   $google_row['webform_ip_address'] = $submission->remote_addr;
+-	
++
+   try {
+     // Ensure we have a working access token.
+     _webform_to_gdocs_google_drive_get_service();
