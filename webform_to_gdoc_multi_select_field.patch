@@ -1,0 +1,18 @@
+diff --git a/webform_to_gdocs.module b/webform_to_gdocs.module
+index fca3bab..36c6c43 100644
+--- a/webform_to_gdocs.module
++++ b/webform_to_gdocs.module
+@@ -95,7 +95,12 @@ function webform_to_gdocs_webform_submission_insert($node, $submission) {
+           $tmp = explode('|', $option);
+           $cleanOptions[$tmp[0]] = $tmp[1];
+         }
+-        $insert_value = $cleanOptions[$value['value'][0]];
++        //$insert_value = $cleanOptions[$value['value'][0]];
++        $multi_select = array();
++        foreach($value as $select_key => $val) {
++          $multi_select[] = $cleanOptions[$value[$select_key]];
++        }
++        $insert_value = implode(', ', (array)$multi_select);
+         break;
+
+       default:
