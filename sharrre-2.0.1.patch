@@ -1,22 +1,51 @@
 diff --git a/src/js/jquery.sharrre.js b/src/js/jquery.sharrre.js
-index 05de60d..8bf1967 100755
+index b5c3a34..babdfb7 100755
 --- a/src/js/jquery.sharrre.js
 +++ b/src/js/jquery.sharrre.js
-@@ -221,7 +221,7 @@
-         else { //template by defaults
-             $(this.element).html(
-                 '<div class="box"><a class="count" href="' + this.options.defaultUrl + '">' + total + '</a>' +
--                (this.options.title !== '' ? '<a class="share" href="' + this.options.defaultUrl + '">' + this.options.title + '</a>' : '') +
-+                (this.options.title !== '' ? '<a class="share" href="' + this.options.defaultUrl + '"><span>' + this.options.title + '</span></a>' : '') +
-                 '</div>'
-             );
+@@ -218,13 +218,13 @@
+             template = template.replace('{total}', total);
+             $(this.element).html(template);
          }
-@@ -243,16 +243,33 @@
-     Plugin.prototype.openPopup = function (site) {
-         this.platforms[site].popup(this.options);  //open
-         if (this.options.enableTracking === true) { //tracking!
+-        else { //template by defaults
+-            $(this.element).html(
+-                '<div class="box"><a class="count" href="' + this.options.defaultUrl + '">' + total + '</a>' +
+-                (this.options.title !== '' ? '<a class="share" href="' + this.options.defaultUrl + '">' + this.options.title + '</a>' : '') +
+-                '</div>'
+-            );
+-        }
++        else { //template by defaults
++            $(this.element).html(
++                '<div class="box"><a class="count" href="' + this.options.defaultUrl + '">' + total + '</a>' +
++                (this.options.title !== '' ? '<a class="share" href="' + this.options.defaultUrl + '"><span>' + this.options.title + '</span></a>' : '') +
++                '</div>'
++            );
++        }
+     };
+ 
+     /* format total numbers like 1.2k or 5M
+@@ -240,22 +240,39 @@
+ 
+     /* Methode for open popup
+      ================================================== */
+-    Plugin.prototype.openPopup = function (site) {
+-        this.platforms[site].popup(this.options);  //open
+-        if (this.options.enableTracking === true) { //tracking!
 -            infos = this.platforms[site].trackingAction;
 -            _gaq.push(['_trackSocial', infos.site, infos.action]);
+-        }
+-    };
+-
+-    /* Methode for add +1 to a counter
+-     ================================================== */
+-    Plugin.prototype.simulateClick = function () {
+-        var html = $(this.element).html();
+-        $(this.element).html(html.replace(this.options.total, this.options.total + 1));
+-    };
+-
+-    /* Methode for add +1 to a counter
++    Plugin.prototype.openPopup = function (site) {
++        this.platforms[site].popup(this.options);  //open
++        if (this.options.enableTracking === true) { //tracking!
 +             infos = this.platforms[site].trackingAction;
 +            //_gaq.push(['_trackSocial', infos.site, infos.action]);
 +            //ga('send', 'social', infos.site, infos.action);
@@ -31,24 +60,25 @@ index 05de60d..8bf1967 100755
 +              'socialTarget': this.options.url,
 +              'event':'trackSocial'
 +            });
-         }
-     };
- 
-     /* Methode for add +1 to a counter
-      ================================================== */
--    Plugin.prototype.simulateClick = function () {
++        }
++    };
++
++    /* Methode for add +1 to a counter
++     ================================================== */
 +    Plugin.prototype.simulateClick = function (className) {
-         var html = $(this.element).html();
--        $(this.element).html(html.replace(this.options.total, this.options.total + 1));
++        var html = $(this.element).html();
 +        //$(this.element).html(html.replace(this.options.total, this.options.total + 1));
 +        if (className === undefined) {
 +          $(this.element).html(html.replace(this.options.total, this.options.total + 1));
 +        } else {
 +          $('.'+className).html(html.replace(this.options.total, this.options.total + 1));
 +        }
-     };
- 
-     /* Methode for add +1 to a counter
++    };
++
++    /* Methode for add +1 to a counter
+      ================================================== */
+     Plugin.prototype.update = function (url, text) {
+         if (url !== '') {
 diff --git a/src/js/platform/delicious.js b/src/js/platform/delicious.js
 index 8ff5c75..76a92b8 100755
 --- a/src/js/platform/delicious.js
@@ -78,7 +108,7 @@ index 80fd782..028512b 100755
          trackingAction: {site: 'digg', action: 'add'},
          load: function (self) {
 diff --git a/src/js/platform/facebook.js b/src/js/platform/facebook.js
-index 2cdaae6..35139a3 100755
+index 5f945e8..c74d296 100755
 --- a/src/js/platform/facebook.js
 +++ b/src/js/platform/facebook.js
 @@ -1,4 +1,4 @@
@@ -87,21 +117,19 @@ index 2cdaae6..35139a3 100755
      defaultSettings = { //http://developers.facebook.com/docs/reference/plugins/like/
          url: '',  //if you need to personalize url button
          urlCount: false,  //if you want to use personnalize button url on global counter
-@@ -24,9 +24,11 @@ SharrrePlatform.register("facebook", function (options) {
+@@ -24,9 +24,9 @@ SharrrePlatform.register("facebook", function (options) {
      return {
          settings: defaultSettings,
          url: function (url) {
--            return "https://graph.facebook.com/fql?q=SELECT%20url,%20normalized_url,%20share_count,%20like_count,%20comment_count,%20total_count,commentsbox_count,%20comments_fbid,%20click_count%20FROM%20link_stat%20WHERE%20url=%27{url}%27&callback=?";
-+            //return "https://graph.facebook.com/fql?q=SELECT%20url,%20normalized_url,%20share_count,%20like_count,%20comment_count,%20total_count,commentsbox_count,%20comments_fbid,%20click_count%20FROM%20link_stat%20WHERE%20url=%27{url}%27&callback=?";
-+            return "//graph.facebook.com/fql?q=SELECT%20url,%20normalized_url,%20share_count,%20like_count,%20comment_count,%20total_count,commentsbox_count,%20comments_fbid,%20click_count%20FROM%20link_stat%20WHERE%20url=%27{url}%27&callback=?";
+-            return "https://graph.facebook.com/?id={url}&callback=?";
++            return "//graph.facebook.com/?id={url}&callback=?";
          },
 -        trackingAction: {site: 'facebook', action: 'like'},
-+        //trackingAction: {site: 'facebook', action: 'like'},
 +        trackingAction: {site: 'facebook', action: 'share'},
          load: function (self) {
              var sett = this.settings;
              $(self.element).find('.buttons').append('<div class="button facebook"><div id="fb-root"></div>' +
-@@ -66,13 +68,34 @@ SharrrePlatform.register("facebook", function (options) {
+@@ -66,13 +66,34 @@ SharrrePlatform.register("facebook", function (options) {
              fb = window.setInterval(function () {
                  if (typeof FB !== 'undefined') {
                      FB.Event.subscribe('edge.create', function (targetUrl) {
@@ -203,7 +231,7 @@ index e9d9391..41465e3 100644
  })();
 \ No newline at end of file
 diff --git a/src/js/platform/twitter.js b/src/js/platform/twitter.js
-index 6e14d24..fc3c686 100755
+index 6e14d24..43a21ca 100755
 --- a/src/js/platform/twitter.js
 +++ b/src/js/platform/twitter.js
 @@ -1,4 +1,4 @@
