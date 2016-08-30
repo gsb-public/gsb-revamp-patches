@@ -1,8 +1,8 @@
 diff --git a/.htaccess b/.htaccess
-index 440cabc..363bfa8 100644
+index 440cabc..e1f15f3 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -107,7 +107,38 @@ DirectoryIndex index.php index.html index.htm
+@@ -107,7 +107,45 @@ DirectoryIndex index.php index.html index.htm
    #
    # If your site is running in a VirtualDocumentRoot at http://example.com/,
    # uncomment the following line:
@@ -15,10 +15,13 @@ index 440cabc..363bfa8 100644
 +  # Rewrite jacksonlibary urls
 +  RewriteRule ^jacksonlibrary/images/(.*)$ /sites/default/files/library_migration/library/images/$1 [R=301,L]
 +  RewriteRule ^jacksonlibrary/(.*)$ /library/$1 [R=301,L]
-+  
++
 +  # Rewrite Exed Campaign landing pages
 +  RewriteRule ^exed/landing/(.*)$ http://cl.gsb.stanford.edu/exed/landing/$1 [R=301,L]
 +  RewriteRule ^exed/msx/(.*)$ http://cl.gsb.stanford.edu/exed/msx/$1 [R=301,L]
++
++  # Rewrite application urls
++  RewriteRule ^exed/app/application_login.aspx(.*)$ http%{ENV:protossl}://applyexed.gsb.stanford.edu/exed/application_login.aspx$1 [R=301,L]
 +
 +  # Exed mobile site
 +  RewriteCond %{HTTP_HOST} ^m.gsb.stanford.edu [NC,OR]
@@ -39,6 +42,10 @@ index 440cabc..363bfa8 100644
 +  RewriteCond %{HTTP_HOST} ^alumni.gsb.stanford.edu [NC,OR]
 +  RewriteCond %{HTTP_HOST} ^www.alumni.gsb.stanford.edu [NC]
 +  RewriteRule ^(.*)$ http://www.gsb.stanford.edu/alumni/$1 [L,R=301,NC]
++
++  # Force www
++  RewriteCond %{HTTP_HOST} ^gsb.stanford.edu [NC]
++  RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
  
    # Pass all requests not referring directly to files in the filesystem to
    # index.php. Clean URLs are handled in drupal_environment_initialize().
