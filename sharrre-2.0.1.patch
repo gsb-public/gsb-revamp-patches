@@ -122,7 +122,7 @@ index 5f945e8..c74d296 100755
          settings: defaultSettings,
          url: function (url) {
 -            return "https://graph.facebook.com/?id={url}&callback=?";
-+            return "//graph.facebook.com/?id={url}&callback=?";
++            return "//graph.facebook.com/?id={url}";
          },
 -        trackingAction: {site: 'facebook', action: 'like'},
 +        trackingAction: {site: 'facebook', action: 'share'},
