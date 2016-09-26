@@ -21,7 +21,7 @@ index 440cabc..e1f15f3 100644
 +  RewriteRule ^exed/msx/(.*)$ http://cl.gsb.stanford.edu/exed/msx/$1 [R=301,L]
 +
 +  # Rewrite application urls
-+  RewriteRule ^exed/app/application_login.aspx(.*)$ http%{ENV:protossl}://applyexed.gsb.stanford.edu/exed/application_login.aspx$1 [R=301,L]
++  RewriteRule ^exed/app/application_login.aspx(.*)$ http%{ENV:protossl}://applyexed.gsb.stanford.edu/exed/app/application_login.aspx$1 [R=301,L]
 +
 +  # Exed mobile site
 +  RewriteCond %{HTTP_HOST} ^m.gsb.stanford.edu [NC,OR]
