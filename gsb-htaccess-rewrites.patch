@@ -1,13 +1,18 @@
 diff --git a/.htaccess b/.htaccess
-index 440cabc..e1f15f3 100644
+index 440cabc..76e9100 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -107,7 +107,45 @@ DirectoryIndex index.php index.html index.htm
+@@ -107,7 +107,50 @@ DirectoryIndex index.php index.html index.htm
    #
    # If your site is running in a VirtualDocumentRoot at http://example.com/,
    # uncomment the following line:
 -  # RewriteBase /
 +  RewriteBase /
++
++  # Redirect HTTP to HTTPS
++  RewriteCond %{HTTPS} off
++  RewriteCond %{HTTP:X-Forwarded-Proto} !https
++  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 +
 +  RewriteCond %{REQUEST_URI} /library/articles/[a-z]*/links/.*\.html$
 +  RewriteRule ^(.*)\.html$ $1 [R=301,L]
