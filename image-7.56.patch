@@ -1,0 +1,41 @@
+diff --git a/image.effects.inc b/image.effects.inc
+index 35a6a74..1e81fb6 100644
+--- a/image.effects.inc
++++ b/image.effects.inc
+@@ -56,6 +56,10 @@ function image_image_effect_info() {
+       'form callback' => 'image_rotate_form',
+       'summary theme' => 'image_rotate_summary',
+     ),
++    'bypass_image_toolkit' => array(
++      'label' => t('Bypass Image Toolkit'),
++      'help' => t('This effect will bypass the image toolkit and simply do a file_copy of the image after all other effects have been applied.'),
++    ),
+   );
+
+   return $effects;
+diff --git a/image.module b/image.module
+index dab8836..40dd3aa 100644
+--- a/image.module
++++ b/image.module
+@@ -925,11 +925,20 @@ function image_style_create_derivative($style, $source, $destination) {
+     return FALSE;
+   }
+
++  $bypass_image_toolkit = false;
+   foreach ($style['effects'] as $effect) {
+     image_effect_apply($image, $effect);
++    if ($effect['name'] == "bypass_image_toolkit") {
++      $bypass_image_toolkit = true;
++    }
+   }
+
+-  if (!image_save($image, $destination)) {
++  if ($bypass_image_toolkit) {
++    $image = image_load($image->source);
++    $image->uri = $image->source;
++    file_copy($image, $destination, FILE_EXISTS_REPLACE);
++  }
++  else if (!image_save($image, $destination)) {
+     if (file_exists($destination)) {
+       watchdog('image', 'Cached image file %destination already exists. There may be an issue with your rewrite configuration.', array('%destination' => $destination), WATCHDOG_ERROR);
+     }
