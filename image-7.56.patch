@@ -1,7 +1,7 @@
-diff --git a/image.effects.inc b/image.effects.inc
+diff --git a/modules/image.effects.inc b/modules/image.effects.inc
 index 35a6a74..1e81fb6 100644
---- a/image.effects.inc
-+++ b/image.effects.inc
+--- a/modules/image.effects.inc
++++ b/modules/image.effects.inc
 @@ -56,6 +56,10 @@ function image_image_effect_info() {
        'form callback' => 'image_rotate_form',
        'summary theme' => 'image_rotate_summary',
@@ -13,10 +13,10 @@ index 35a6a74..1e81fb6 100644
    );
 
    return $effects;
-diff --git a/image.module b/image.module
+diff --git a/modules/image.module b/modules/image.module
 index dab8836..40dd3aa 100644
---- a/image.module
-+++ b/image.module
+--- a/modules/image.module
++++ b/modules/image.module
 @@ -925,11 +925,20 @@ function image_style_create_derivative($style, $source, $destination) {
      return FALSE;
    }
