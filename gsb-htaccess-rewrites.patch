@@ -1,8 +1,8 @@
 diff --git a/.htaccess b/.htaccess
-index 440cabc..76e9100 100644
+index 37fce10..274d321 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -107,7 +107,50 @@ DirectoryIndex index.php index.html index.htm
+@@ -112,7 +112,54 @@ DirectoryIndex index.php index.html index.htm
    #
    # If your site is running in a VirtualDocumentRoot at http://example.com/,
    # uncomment the following line:
@@ -51,6 +51,10 @@ index 440cabc..76e9100 100644
 +  # Force www
 +  RewriteCond %{HTTP_HOST} ^gsb.stanford.edu [NC]
 +  RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
++  # Rewrite for Coveo
++  RewriteCond %{QUERY_STRING} ^(.*&)?q=([^&]*)(&.*)?$ [NC]
++  RewriteRule ^ %{REQUEST_URI}?%1coveoquery=%2%3 [NC]
  
    # Pass all requests not referring directly to files in the filesystem to
    # index.php. Clean URLs are handled in drupal_environment_initialize().
