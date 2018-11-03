@@ -1,13 +1,17 @@
 diff --git a/.htaccess b/.htaccess
-index 37fce10..5a2c237 100644
+index 37fce10d32..b96026411d 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -112,7 +112,55 @@ DirectoryIndex index.php index.html index.htm
+@@ -112,7 +112,59 @@ DirectoryIndex index.php index.html index.htm
    #
    # If your site is running in a VirtualDocumentRoot at http://example.com/,
    # uncomment the following line:
 -  # RewriteBase /
 +  RewriteBase /
++
++  # Send to 404 any root-level *.txt file requests
++  RewriteCond %{REQUEST_URI} ^((?!([\ ]*+[0-9A-Za-z]++[\ ]*+)+\/).)*.txt$
++  RewriteRule (.*) - [R=404,L]
 +
 +  # Redirect HTTP to HTTPS
 +  RewriteCond %{HTTPS} off
@@ -56,6 +60,6 @@ index 37fce10..5a2c237 100644
 +  RewriteCond %{REQUEST_URI} /coveo-search/v2/querySuggest
 +  RewriteCond %{QUERY_STRING} ^(.*&)?q=([^&]*)(&.*)?$ [NC]
 +  RewriteRule ^ %{REQUEST_URI}?%1coveoquery=%2%3 [NC]
- 
+
    # Pass all requests not referring directly to files in the filesystem to
    # index.php. Clean URLs are handled in drupal_environment_initialize().
