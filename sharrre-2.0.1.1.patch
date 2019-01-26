@@ -252,7 +252,7 @@ index 6e14d24..43a21ca 100755
          popup: function (opt) {
 +            if (this.settings.url !== '') {
 +                var shortUrl = $('.short-url').text();
-+                this.settings.url = this.settings.url.replace('//opensharecount.com/count.json?url=', '');
++                this.settings.url = this.settings.url.replace('/gsb-social/fake-twitter-count?url=', '');
 +            }
              window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(opt.text) + "&url="
 -            + encodeURIComponent((this.settings.url !== '' ? this.setting.url : opt.url))
