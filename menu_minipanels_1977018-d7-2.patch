@@ -1,0 +1,14 @@
+diff --git a/menu_minipanels.make b/menu_minipanels.make
+index 6fdc8af..40845f5 100644
+--- a/menu_minipanels.make
++++ b/menu_minipanels.make
+@@ -6,7 +6,5 @@ api = 2
+ core = 7.x
+ 
+ ; Download the qTip v1 library.
+-libraries[qtip][download][type] = "get"
+-libraries[qtip][download][url] = "http://craigsworks.com/projects/qtip/download/package/production/development/"
+-libraries[qtip][directory_name] = "qtip"
+-libraries[qtip][destination] = "libraries"
++libraries[qtip][download][type] = "file"
++libraries[qtip][download][url] = "https://raw.githubusercontent.com/Craga89/qTip1/master/1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"
