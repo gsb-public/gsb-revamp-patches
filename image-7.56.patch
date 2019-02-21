@@ -1,5 +1,5 @@
 diff --git a/modules/image/image.effects.inc b/modules/image/image.effects.inc
-index 35a6a74..1e81fb6 100644
+index 35a6a74c7a..1e81fb605e 100644
 --- a/modules/image/image.effects.inc
 +++ b/modules/image/image.effects.inc
 @@ -56,6 +56,10 @@ function image_image_effect_info() {
@@ -14,7 +14,7 @@ index 35a6a74..1e81fb6 100644
  
    return $effects;
 diff --git a/modules/image/image.module b/modules/image/image.module
-index dab8836..38b8f8a 100644
+index dab88361a2..38b8f8aa5e 100644
 --- a/modules/image/image.module
 +++ b/modules/image/image.module
 @@ -925,7 +925,14 @@ function image_style_create_derivative($style, $source, $destination) {
@@ -46,3 +46,4 @@ index dab8836..38b8f8a 100644
 +
    return TRUE;
  }
+ 
