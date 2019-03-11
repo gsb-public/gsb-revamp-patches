@@ -1,8 +1,29 @@
 diff --git a/.htaccess b/.htaccess
-index 37fce10d32..b96026411d 100644
+index 37fce10..bca5915 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -112,7 +112,59 @@ DirectoryIndex index.php index.html index.htm
+@@ -1,4 +1,20 @@
+ #
++# Blocking a few specific ips
++#
++
++<ifmodule mod_setenvif.c>
++SetEnvIf AH_CLIENT_IP ^95\.171\.1\.153$ DENY=1
++SetEnvIf AH_CLIENT_IP ^36\.91\.4\.58$ DENY=1
++SetEnvIf AH_CLIENT_IP ^103\.206\.112\.176$ DENY=1
++SetEnvIf AH_CLIENT_IP ^176\.126\.30\.116$ DENY=1
++SetEnvIf AH_CLIENT_IP ^207\.241\.231\.213$ DENY=1
++SetEnvIf AH_CLIENT_IP ^120\.39\.41\.62$ DENY=1
++Order allow,deny
++Allow From All
++Deny from env=DENY
++</ifmodule>
++
++#
+ # Apache/PHP/Drupal settings:
+ #
+ 
+@@ -112,7 +128,73 @@ DirectoryIndex index.php index.html index.htm
    #
    # If your site is running in a VirtualDocumentRoot at http://example.com/,
    # uncomment the following line:
@@ -12,6 +33,20 @@ index 37fce10d32..b96026411d 100644
 +  # Send to 404 any root-level *.txt file requests
 +  RewriteCond %{REQUEST_URI} ^((?!([\ ]*+[0-9A-Za-z]++[\ ]*+)+\/).)*.txt$
 +  RewriteRule (.*) - [R=404,L]
++
++  # Blocking these bots
++
++  RewriteCond %{HTTP_USER_AGENT} ^.*rogerbot.*$ [NC]
++  RewriteRule (.*) - [R=403,L]
++
++  RewriteCond %{HTTP_USER_AGENT} ^.*MauiBot.*$ [NC]
++  RewriteRule (.*) - [R=403,L]
++
++  RewriteCond %{HTTP_USER_AGENT} ^.*SemrushBot.*$ [NC]
++  RewriteRule (.*) - [R=403,L]
++
++  RewriteCond %{ENV:AH_Client_IP} ^46\.229\..*
++  RewriteRule (.*) - [R=403,L]
 +
 +  # Redirect HTTP to HTTPS
 +  RewriteCond %{HTTPS} off
@@ -60,6 +95,6 @@ index 37fce10d32..b96026411d 100644
 +  RewriteCond %{REQUEST_URI} /coveo-search/v2/querySuggest
 +  RewriteCond %{QUERY_STRING} ^(.*&)?q=([^&]*)(&.*)?$ [NC]
 +  RewriteRule ^ %{REQUEST_URI}?%1coveoquery=%2%3 [NC]
-
+ 
    # Pass all requests not referring directly to files in the filesystem to
    # index.php. Clean URLs are handled in drupal_environment_initialize().
