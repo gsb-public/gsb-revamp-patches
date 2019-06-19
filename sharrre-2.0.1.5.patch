@@ -6,14 +6,6 @@ index b5c3a34..5456151 100755
                      count += parseInt(temp, 10);
                  }
                  //get the FB total count (shares, likes and more)
-diff --git a/src/js/jquery.sharrre.js b/src/js/jquery.sharrre.js
-index b5c3a34..5456151 100755
---- a/src/js/jquery.sharrre.js
-+++ b/src/js/jquery.sharrre.js
-@@ -167,7 +167,7 @@
-                     count += parseInt(temp, 10);
-                 }
-                 //get the FB total count (shares, likes and more)
 -                else if (json.share && json.share.length > 0 && typeof json.share.share_count !== "undefined") { //Facebook total count
 +                else if (json.share && (json.share.length > 0 || Object.keys(json.share).length > 0) && typeof json.share.share_count !== "undefined") { //Facebook total count
                      count += parseInt(json.share.share_count, 10);
