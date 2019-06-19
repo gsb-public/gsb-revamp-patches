@@ -158,7 +158,7 @@ index 5f945e8..1a685e9 100755
              encodeURIComponent((this.settings.url !== '' ? this.settings.url : opt.url)) +
              "&t=" + opt.text + "", "", "toolbar=0, status=0, width=" + this.settings.popup.width + ", height=" + this.settings.popup.height);
 diff --git a/src/js/platform/linkedin.js b/src/js/platform/linkedin.js
-index 13a07fb..2fa3014 100755
+index 13a07fb..efc7186 100755
 --- a/src/js/platform/linkedin.js
 +++ b/src/js/platform/linkedin.js
 @@ -1,4 +1,4 @@
@@ -178,7 +178,7 @@ index 13a07fb..2fa3014 100755
          },
          trackingAction: {site: 'linkedin', action: 'share'},
          load: function (self) {
-@@ -38,7 +40,13 @@ SharrrePlatform.register("linkedin", function (options) {
+@@ -38,12 +40,17 @@ SharrrePlatform.register("linkedin", function (options) {
          },
          tracking: function () {
              function LinkedInShare() {
@@ -193,6 +193,12 @@ index 13a07fb..2fa3014 100755
              }
          },
          popup: function (opt) {
+-            window.open('https://www.linkedin.com/cws/share?url=' +
+-            encodeURIComponent((this.settings.url !== '' ? this.settings.url : opt.url)) +
++            window.open('https://www.linkedin.com/cws/share?url=' + opt.url +
+             '&token=&isFramed=true', 'linkedin', 'toolbar=no, width=' + this.settings.popup.width + ", height=" + this.settings.popup.height);
+         }
+     }
 diff --git a/src/js/platform/pinterest.js b/src/js/platform/pinterest.js
 index 327cfa3..81625ac 100755
 --- a/src/js/platform/pinterest.js
