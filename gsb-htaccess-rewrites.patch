@@ -1,8 +1,8 @@
 diff --git a/.htaccess b/.htaccess
-index 37fce10..4b1e392 100644
+index 37fce10..4b016a9 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -1,4 +1,21 @@
+@@ -1,4 +1,32 @@
  #
 +# Blocking a few specific ips
 +#
@@ -15,6 +15,17 @@ index 37fce10..4b1e392 100644
 +SetEnvIf AH_CLIENT_IP ^207\.241\.231\.213$ DENY=1
 +SetEnvIf AH_CLIENT_IP ^120\.39\.41\.62$ DENY=1
 +SetEnvIf AH_CLIENT_IP ^217\.77\.215\.74$ DENY=1
++SetEnvIf AH_CLIENT_IP ^10\.109\.195\.96$ DENY=1
++SetEnvIf AH_CLIENT_IP ^10\.65\.213\.42$ DENY=1
++SetEnvIf AH_CLIENT_IP ^188\.2\.81\.24$ DENY=1
++SetEnvIf AH_CLIENT_IP ^104\.54\.85\.29$ DENY=1
++SetEnvIf AH_CLIENT_IP ^176\.111\.246\.52$ DENY=1
++SetEnvIf AH_CLIENT_IP ^201\.242\.211\.188$ DENY=1
++SetEnvIf AH_CLIENT_IP ^194\.146\.137\.241$ DENY=1
++SetEnvIf AH_CLIENT_IP ^195\.225\.160\.215$ DENY=1
++SetEnvIf AH_CLIENT_IP ^79\.112\.217\.112$ DENY=1
++SetEnvIf AH_CLIENT_IP ^41\.216\.164\.69$ DENY=1
++SetEnvIf AH_CLIENT_IP ^85\.53\.243\.175$ DENY=1
 +Order allow,deny
 +Allow From All
 +Deny from env=DENY
@@ -24,7 +35,7 @@ index 37fce10..4b1e392 100644
  # Apache/PHP/Drupal settings:
  #
  
-@@ -112,7 +129,73 @@ DirectoryIndex index.php index.html index.htm
+@@ -112,7 +140,73 @@ DirectoryIndex index.php index.html index.htm
    #
    # If your site is running in a VirtualDocumentRoot at http://example.com/,
    # uncomment the following line:
@@ -99,7 +110,7 @@ index 37fce10..4b1e392 100644
  
    # Pass all requests not referring directly to files in the filesystem to
    # index.php. Clean URLs are handled in drupal_environment_initialize().
-@@ -151,4 +234,10 @@ DirectoryIndex index.php index.html index.htm
+@@ -151,4 +245,10 @@ DirectoryIndex index.php index.html index.htm
  <IfModule mod_headers.c>
    # Disable content sniffing, since it's an attack vector.
    Header always set X-Content-Type-Options nosniff
